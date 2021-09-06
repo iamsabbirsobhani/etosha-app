@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunketosha_app"]=self["webpackChunketosha_app"]||[]).push([[216],{2216:(e,t,n)=>{n.r(t),n.d(t,{default:()=>c});var s=n(3673);function a(e,t,n,a,u,c){return(0,s.wg)(),(0,s.iD)("h1",null,"Contact Us")}const u={};u.render=a;const c=u}}]);
