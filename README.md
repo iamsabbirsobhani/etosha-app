@@ -2,7 +2,7 @@
 
 Etosha App Your Digital Etosha Guide
 
-## Install the dependencies
+<!-- ## Install the dependencies
 ```bash
 yarn
 ```
@@ -20,7 +20,7 @@ yarn run lint
 ### Build the app for production
 ```bash
 quasar build
-```
+``` -->
 
 ### Customize the configuration
-See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).
+See [Website](https://example.com).
