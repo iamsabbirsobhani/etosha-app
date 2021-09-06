@@ -23,4 +23,4 @@ quasar build
 ``` -->
 
 ### Customize the configuration
-See [Website](https://example.com).
+See [Website](https://etosha-app.vercel.app).
