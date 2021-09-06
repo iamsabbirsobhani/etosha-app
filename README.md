@@ -22,5 +22,5 @@ yarn run lint
 quasar build
 ``` -->
 
-### Customize the configuration
+<!-- ### Customize the configuration -->
 See [Website](https://etosha-app.vercel.app).
