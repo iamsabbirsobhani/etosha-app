@@ -28,18 +28,39 @@
     <!-- </div> -->
   </div>
 
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <h1>Home</h1>
-  <OurMission/>
+  <!-- mammal guide -->
+  <div class="mammal-guide">
+    <div class="mammal-first">
+      <img src="../assets/mammalGuide.png" alt="" />
+    </div>
+    <div class="mammal-second">
+      <h3>Mammal Guide</h3>
+      <p> <strong> Etosha specific information </strong>of all mammals found in the Etosha.</p>
+    </div>
+  </div>
+
+  <!-- etosha map -->
+  <div class="etosha-map">
+    <div class="etosha-second">
+      <h3>Etosha Map</h3>
+      <p>Detailed <strong> offline map </strong> of the complete Etosha National Park.</p>
+    </div>
+    <div class="etosha-first">
+      <img src="../assets/etoshaMap.png" alt="" />
+    </div>
+  </div>
+
+  <!-- insider tips -->
+  <div class="insider-tips">
+    <div class="insider-first">
+      <img src="../assets/insiderTips.png" alt="" />
+    </div>
+    <div class="insider-second">
+      <h3>Insider Tips</h3>
+      <p>Etosha specific information to all mammals found in the Etosha.</p>
+    </div>
+  </div>
+  <OurMission />
   <Footer />
 </template>
 
@@ -119,6 +140,69 @@ export default {
   }
 }
 
+// mammal-guide
+.mammal-guide {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .mammal-first {
+    img {
+      max-width: 550px;
+    }
+  }
+  .mammal-second {
+    p {
+      color: gray;
+      font-size: 16px;
+    }
+  }
+}
+// etosha-map
+.etosha-map {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .etosha-first {
+    img {
+      max-width: 550px;
+    }
+  }
+  .etosha-second {
+    p {
+      color: gray;
+      font-size: 16px;
+
+    }
+  }
+}
+
+// insider-tips
+.insider-tips {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .insider-first {
+    img {
+      max-width: 550px;
+    }
+  }
+  .insider-second {
+    p {
+      color: gray;
+      font-size: 16px;
+
+    }
+  }
+}
+
+strong{
+  font-weight: bold;
+  color: black;
+}
+
 @media (max-width: 768px) {
   .contents {
     flex-direction: column;
@@ -157,6 +241,56 @@ export default {
       text-align: center;
       color: white;
       font-size: 17px;
+    }
+  }
+
+  // mammal-guide
+  .mammal-guide {
+    flex-direction: column-reverse;
+    .mammal-first {
+      img {
+        max-width: 300px;
+      }
+    }
+    .mammal-second {
+      padding: 20px;
+      margin-left: 3%;
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
+  // etosha-map
+  .etosha-map {
+    flex-direction: column;
+    .etosha-first {
+      img {
+        max-width: 300px;
+      }
+    }
+    .etosha-second {
+      padding: 20px;
+      margin-left: 3%;
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // insider-tips
+  .insider-tips {
+    flex-direction: column-reverse;
+    .insider-first {
+      img {
+        max-width: 300px;
+      }
+    }
+    .insider-second {
+      padding: 20px;
+      margin-left: 3%;
+      h3 {
+        font-size: 30px;
+      }
     }
   }
 }
