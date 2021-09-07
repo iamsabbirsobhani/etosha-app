@@ -1,19 +1,20 @@
 <template>
-    <Navbar/>
-  <h1>Features</h1>
-  <h1>Features</h1>
-  <h1>Features</h1>
-  <h1>Features</h1>
-  <h1>Features</h1>
-  <h1>Features</h1>
+  <Navbar/>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
+  <h5>Prerelease</h5>
 
-    <Footer/>
+  <Footer/>
 </template>
 
 <script>
 import Navbar from 'src/components/Navbar.vue'
 import Footer from 'src/components/Footer.vue'
-
 export default {
   components: { Navbar, Footer },
 
