@@ -69,9 +69,23 @@ import Navbar from "src/components/Navbar.vue";
 import Footer from "src/components/Footer.vue";
 import OurMission from "../subComponent/OurMission.vue";
 import { useRouter } from "vue-router";
+import { useMeta } from 'quasar'
+
+let metaData = {
+  // sets document title
+  title: 'Etosha | Home',
+  // optional; sets final title as "Index Page - My Website", useful for multiple level meta
+  titleTemplate: title => `${title}`,
+  // meta tags
+  meta: {
+    description: { name: 'theme-color', content: '#cb945e'}
+  }
+}
+
 export default {
   components: { Navbar, Footer, OurMission },
   setup() {
+    useMeta(metaData)
     const router = useRouter();
     const preRelease = () => {
       router.push({ name: "Prerelease" });
@@ -155,6 +169,7 @@ export default {
     p {
       color: gray;
       font-size: 16px;
+      margin-top: 5px;
     }
   }
 }
@@ -173,6 +188,7 @@ export default {
     p {
       color: gray;
       font-size: 16px;
+      margin-top: 5px;
 
     }
   }
@@ -193,6 +209,7 @@ export default {
     p {
       color: gray;
       font-size: 16px;
+      margin-top: 5px;
 
     }
   }
