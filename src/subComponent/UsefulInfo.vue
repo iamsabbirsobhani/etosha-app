@@ -6,13 +6,13 @@
         <img src="../assets/features/sightings.png" alt="" />
       </div>
       <div class="useful-second">
-          <p>Your will find some more usefull information pages like</p>
-          <ul>
-              <li>Gate Opening and Closing Numbers</li>
-              <li>Emergency Contact Numbers</li>
-              <li>Camp Information</li>
-              <li>Game Drive Insider Tips</li>
-          </ul>
+        <p>Your will find some more usefull information pages like</p>
+        <ul>
+          <li>Gate Opening and Closing Numbers</li>
+          <li>Emergency Contact Numbers</li>
+          <li>Camp Information</li>
+          <li>Game Drive Insider Tips</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -23,54 +23,84 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.useful-info{
+.useful-info {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  h3 {
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  .useful {
+    display: flex;
+    justify-content: space-around;
+    // align-items: center;
+  }
+  .useful-first {
+    img {
+      max-height: 550px;
+    }
+  }
+  .useful-second {
+    max-width: 600px;
+    p {
+      font-size: 30px;
+    }
+    li {
+      margin-left: 10%;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .useful-info {
     margin-top: 150px;
     margin-bottom: 150px;
-    h3{
+    h3 {
+      margin-left: 10%;
+      margin-bottom: 5%;
+    }
+    .useful {
+      display: flex;
+      justify-content: space-around;
+      // align-items: center;
+    }
+    .useful-first {
+      img {
+        max-height: 400px;
+      }
+    }
+    .useful-second {
+      max-width: 400px;
+      p {
+        font-size: 20px;
+      }
+      li {
         margin-left: 10%;
-        margin-bottom: 5%;
+        font-size: 18px;
+      }
     }
-    .useful{
-        display: flex;
-        justify-content: space-around;
-        // align-items: center;
-    }
-    .useful-first{
-        img{
-            max-height: 400px;
-        }
-    }
-    .useful-second{
-        max-width: 400px;
-        p{
-            font-size: 20px;
-        }
-        li{
-            margin-left: 10%;
-            font-size: 18px;
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    .useful-info{
-        h3{
-            font-size: 35px;
-        }
+  .useful-info {
+    h3 {
+      font-size: 35px;
     }
-    .useful{
-        flex-direction: column;
-        text-align: center;
+  }
+  .useful {
+    flex-direction: column;
+    text-align: center;
+  }
+  .useful-second {
+    p {
+      text-align: start;
+      margin-left: 5%;
     }
-    .useful-second{
-        p{
-            text-align: start;
-            margin-left: 5%;
-        }
-        li{
-            text-align: start;
-        }
+    li {
+      text-align: start;
     }
+  }
 }
-
 </style>

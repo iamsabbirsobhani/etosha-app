@@ -45,7 +45,7 @@ export default {
 .footer {
   display: flex;
   justify-content: space-around;
-//   align-items: center;
+  //   align-items: center;
   margin: 20px 0px;
 }
 .footer-wrapper {
@@ -55,14 +55,14 @@ export default {
   border-top-right-radius: 50px;
   box-shadow: 0 2px 4px 1px;
   padding: 10px;
-//   background: white;
+  //   background: white;
 }
 .store {
   display: flex;
   justify-content: center;
   margin: 20px 0px;
   img {
-    width: 210px;
+    width: 220px;
     margin-left: 20px;
     cursor: pointer;
   }
@@ -71,6 +71,7 @@ export default {
   text-align: center;
   margin-top: 10px;
   color: gray;
+  font-size: 25px;
 }
 .first {
   img {
@@ -80,16 +81,81 @@ export default {
 }
 .second {
   h3 {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
+  }
+  p {
+    font-size: 20px;
   }
 }
 .third {
   h3 {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
   }
+  p {
+    font-size: 20px;
+  }
 }
+
+@media (max-width: 1366px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    //   align-items: center;
+    margin: 20px 0px;
+  }
+  .footer-wrapper {
+    position: relative;
+    bottom: 0;
+    //   border-top: 1px solid gray;
+    border-top-right-radius: 50px;
+    box-shadow: 0 2px 4px 1px;
+    padding: 10px;
+    //   background: white;
+  }
+  .store {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    img {
+      width: 210px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 10px;
+    color: gray;
+    font-size: 18px;
+  }
+  .first {
+    img {
+      width: 100px;
+      margin-top: 10%;
+    }
+  }
+  .second {
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+  .third {
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
 @media (max-width: 764px) {
   .footer {
     flex-direction: column;
@@ -105,6 +171,25 @@ export default {
   }
   .copyright {
     margin-top: 10px;
+    font-size: 18px;
+  }
+  .second {
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .third {
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 }
 </style>

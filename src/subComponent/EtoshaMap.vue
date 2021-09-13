@@ -20,7 +20,7 @@ export default {};
 .etosha-map {
   margin-top: 150px;
   h3 {
-    margin-left: 10%;
+    margin-left: 5%;
     margin-bottom: 3%;
   }
 }
@@ -31,18 +31,45 @@ export default {};
 }
 .etosha-first {
   img {
-    max-width: 400px;
+    max-width: 550px;
   }
 }
 .etosha-second {
-  max-width: 400px;
+  max-width: 600px;
   p {
-    font-size: 18px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .etosha-map {
+    margin-top: 150px;
+    h3 {
+      margin-left: 10%;
+      margin-bottom: 3%;
+    }
+  }
+  .etosha {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .etosha-first {
+    img {
+      max-width: 400px;
+    }
+  }
+  .etosha-second {
+    max-width: 400px;
+    p {
+      font-size: 18px;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .etosha {
+    margin-top: 50px;
     flex-direction: column;
   }
   .etosha-first {

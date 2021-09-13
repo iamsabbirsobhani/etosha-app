@@ -36,7 +36,7 @@ export default {};
 .mammal {
   margin-top: 100px;
   h3 {
-    margin-left: 10%;
+    margin-left: 6%;
     margin-bottom: 5%;
   }
 }
@@ -46,17 +46,46 @@ export default {};
 }
 .mammal-first {
   img {
-    height: 400px;
+    height: 550px;
   }
 }
 .mammal-second {
-  max-width: 450px;
+  max-width: 550px;
   p {
-    font-size: 20px;
+    font-size: 30px;
   }
   li {
-    font-size: 18px;
-    margin-left: 10%;
+    font-size: 25px;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .mammal {
+    margin-top: 100px;
+    h3 {
+      margin-left: 10%;
+      margin-bottom: 5%;
+    }
+  }
+  .mammal-guide {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mammal-first {
+    img {
+      height: 400px;
+    }
+  }
+  .mammal-second {
+    max-width: 450px;
+    p {
+      font-size: 20px;
+    }
+    li {
+      font-size: 18px;
+      margin-left: 10%;
+    }
   }
 }
 

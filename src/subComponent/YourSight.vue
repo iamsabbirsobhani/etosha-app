@@ -43,14 +43,14 @@ export default {};
 }
 .sight-first {
   img {
-    height: 400px;
+    height: 550px;
   }
 }
 .sight-second {
-  max-width: 500px;
+  max-width: 600px;
   margin-bottom: 5%;
   p {
-    font-size: 18px;
+    font-size: 30px;
   }
   .my-card {
     background: #cb945e;
@@ -59,6 +59,40 @@ export default {};
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .your-sight {
+    margin-top: 100px;
+    h3 {
+      margin-left: 10%;
+      margin-bottom: 5%;
+    }
+  }
+  .sight {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sight-first {
+    img {
+      height: 400px;
+    }
+  }
+  .sight-second {
+    max-width: 500px;
+    margin-bottom: 5%;
+    p {
+      font-size: 18px;
+    }
+    .my-card {
+      background: #cb945e;
+      .text-h5 {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .sight {
     flex-direction: column;
@@ -76,6 +110,7 @@ export default {};
     }
   }
   .your-sight {
+    margin-top: 50px;
     h3 {
       margin-left: 5%;
     }

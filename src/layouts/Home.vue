@@ -35,7 +35,10 @@
     </div>
     <div class="mammal-second">
       <h3>Mammal Guide</h3>
-      <p> <strong> Etosha specific information </strong>of all mammals found in the Etosha.</p>
+      <p>
+        <strong> Etosha specific information </strong>of all mammals found in
+        the Etosha.
+      </p>
     </div>
   </div>
 
@@ -43,7 +46,10 @@
   <div class="etosha-map">
     <div class="etosha-second">
       <h3>Etosha Map</h3>
-      <p>Detailed <strong> offline map </strong> of the complete Etosha National Park.</p>
+      <p>
+        Detailed <strong> offline map </strong> of the complete Etosha National
+        Park.
+      </p>
     </div>
     <div class="etosha-first">
       <img src="../assets/etoshaMap.png" alt="" />
@@ -69,23 +75,23 @@ import Navbar from "src/components/Navbar.vue";
 import Footer from "src/components/Footer.vue";
 import OurMission from "../subComponent/OurMission.vue";
 import { useRouter } from "vue-router";
-import { useMeta } from 'quasar'
+import { useMeta } from "quasar";
 
 let metaData = {
   // sets document title
-  title: 'Etosha | Home',
+  title: "Etosha | Home",
   // optional; sets final title as "Index Page - My Website", useful for multiple level meta
-  titleTemplate: title => `${title}`,
+  titleTemplate: (title) => `${title}`,
   // meta tags
   meta: {
-    description: { name: 'theme-color', content: '#cb945e'}
-  }
-}
+    description: { name: "theme-color", content: "#cb945e" },
+  },
+};
 
 export default {
   components: { Navbar, Footer, OurMission },
   setup() {
-    useMeta(metaData)
+    useMeta(metaData);
     const router = useRouter();
     const preRelease = () => {
       router.push({ name: "Prerelease" });
@@ -101,7 +107,7 @@ export default {
 
 <style lang="scss" scoped>
 .front-page {
-  height: 120vh;
+  height: 100vh;
   background-image: url("../assets/frontBg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -114,7 +120,7 @@ export default {
 }
 .third {
   img {
-    height: 500px;
+    height: 600px;
     margin-top: 20%;
   }
 }
@@ -122,7 +128,7 @@ export default {
   display: flex;
   margin: 20px 0px;
   img {
-    width: 210px;
+    width: 250px;
     cursor: pointer;
   }
   .gimg {
@@ -133,15 +139,17 @@ export default {
   h1 {
     color: white;
     font-weight: 700;
+    font-size: 100px;
   }
   h6 {
     color: white;
-    font-weight: 500px;
+    font-weight: 300px;
+    font-size: 25px;
   }
 }
 
 .fourth {
-  width: 500px;
+  width: 650px;
   background: #cb945e;
   border: 2px solid white;
   border-radius: 10px;
@@ -149,7 +157,7 @@ export default {
   p {
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
   }
 }
@@ -162,13 +170,13 @@ export default {
   align-items: center;
   .mammal-first {
     img {
-      max-width: 550px;
+      max-width: 650px;
     }
   }
   .mammal-second {
     p {
       color: gray;
-      font-size: 16px;
+      font-size: 22px;
       margin-top: 5px;
     }
   }
@@ -181,15 +189,14 @@ export default {
   align-items: center;
   .etosha-first {
     img {
-      max-width: 550px;
+      max-width: 650px;
     }
   }
   .etosha-second {
     p {
       color: gray;
-      font-size: 16px;
+      font-size: 22px;
       margin-top: 5px;
-
     }
   }
 }
@@ -202,25 +209,147 @@ export default {
   align-items: center;
   .insider-first {
     img {
-      max-width: 550px;
+      max-width: 650px;
     }
   }
   .insider-second {
     p {
       color: gray;
-      font-size: 16px;
+      font-size: 22px;
       margin-top: 5px;
-
     }
   }
 }
 
-strong{
+strong {
   font-weight: bold;
   color: black;
 }
 
+@media (max-width: 1366px) {
+  .front-page {
+    height: 120vh;
+    background-image: url("../assets/frontBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .contents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .third {
+    img {
+      height: 500px;
+      margin-top: 20%;
+    }
+  }
+  .store {
+    display: flex;
+    margin: 20px 0px;
+    img {
+      width: 210px;
+      cursor: pointer;
+    }
+    .gimg {
+      margin-left: 20px;
+    }
+  }
+  .first {
+    h1 {
+      color: white;
+      font-weight: 700;
+    }
+    h6 {
+      color: white;
+      font-weight: 500px;
+    }
+  }
+
+  .fourth {
+    width: 500px;
+    background: #cb945e;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: auto;
+    p {
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+
+  // mammal-guide
+  .mammal-guide {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .mammal-first {
+      img {
+        max-width: 550px;
+      }
+    }
+    .mammal-second {
+      p {
+        color: gray;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+    }
+  }
+  // etosha-map
+  .etosha-map {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .etosha-first {
+      img {
+        max-width: 550px;
+      }
+    }
+    .etosha-second {
+      p {
+        color: gray;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  // insider-tips
+  .insider-tips {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .insider-first {
+      img {
+        max-width: 550px;
+      }
+    }
+    .insider-second {
+      p {
+        color: gray;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  strong {
+    font-weight: bold;
+    color: black;
+  }
+}
+
 @media (max-width: 768px) {
+  .front-page {
+    height: 120vh;
+  }
   .contents {
     flex-direction: column;
     text-align: center;
@@ -279,6 +408,7 @@ strong{
   }
   // etosha-map
   .etosha-map {
+    margin-top: 50px;
     flex-direction: column;
     .etosha-first {
       img {
@@ -296,6 +426,7 @@ strong{
 
   // insider-tips
   .insider-tips {
+    margin-top: 50px;
     flex-direction: column-reverse;
     .insider-first {
       img {

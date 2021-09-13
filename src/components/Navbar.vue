@@ -4,17 +4,17 @@
       <img @click="goHome" src="../assets/logo.png" alt="" />
     </div>
     <div class="nav-button">
+        <!-- size="16px" -->
       <q-btn
         flat
-        size="16px"
         :to="{ name: 'Home' }"
         class="text-white"
         no-caps
         label="Home"
       />
+        <!-- size="16px" -->
       <q-btn
         flat
-        size="16px"
         :to="{ name: 'Features' }"
         class="text-white"
         no-caps
@@ -58,16 +58,16 @@
     <div class="overlay-content">
       <!-- <q-btn @click="scroll('twr')" :style="navBtn" label="Technology" flat /> -->
       <q-btn
-        flat
         size="16px"
+        flat
         :to="{ name: 'Home' }"
         class="text-black"
         no-caps
         label="Home"
       />
       <q-btn
-        flat
         size="16px"
+        flat
         :to="{ name: 'Features' }"
         class="text-black"
         no-caps
@@ -108,7 +108,7 @@ export default {
     };
     const goHome = () => {
       router.push({ name: "Home" });
-    }
+    };
     return { addNavCls, isTrue, navStyle, goHome };
   },
 };
@@ -120,8 +120,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 70px;
-  padding: 30px;
+  height: 90px;
+  padding: 40px;
   background: #cb945e;
   box-shadow: 0.1px 0.1px 5px gray;
 }
@@ -134,7 +134,7 @@ export default {
   align-self: center;
   border-radius: 5px;
   img {
-    width: 40px;
+    width: 60px;
     cursor: pointer;
   }
 }
@@ -193,6 +193,96 @@ export default {
 .mobile-navbar {
   display: none;
 }
+
+.text-white {
+  font-size: 20px !important;
+}
+
+@media (max-width: 1366px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 30px;
+    background: #cb945e;
+    box-shadow: 0.1px 0.1px 5px gray;
+  }
+
+  .q-btn {
+    margin-left: 10px;
+  }
+
+  .logo-img {
+    align-self: center;
+    border-radius: 5px;
+    img {
+      width: 40px;
+      cursor: pointer;
+    }
+  }
+
+  .nav-button {
+    display: flex;
+    height: 40px;
+  }
+
+  /* The Overlay (background) */
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    // background: black;
+    background: white;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  /* Position the content inside the overlay */
+  .overlay-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #888888;
+  }
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .mobile-navbar {
+    display: none;
+  }
+
+  .text-white {
+    font-size: 16px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .q-btn {
     width: 250px;
@@ -362,6 +452,10 @@ export default {
   #menu-toggle.open #cross span:nth-child(2) {
     width: 100%;
     transition-delay: 0.375s;
+  }
+
+  .text-white {
+    font-size: 16px !important;
   }
 }
 </style>

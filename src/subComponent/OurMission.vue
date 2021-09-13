@@ -37,6 +37,7 @@ export default {};
   li {
     margin-top: 20px;
     margin-left: 20px;
+    font-size: 25px;
   }
   img {
     max-width: 500px;
@@ -45,7 +46,7 @@ export default {};
 }
 .my-card {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 20px;
   background: #cb945e;
   border: 2px solid white;
@@ -53,15 +54,60 @@ export default {};
   color: white;
 }
 .our-mission {
-  height: 120vh;
+  height: 100vh;
   background-image: url("../assets/missionBg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media (max-width: 1366px) {
+  .our-mission {
+    display: flex;
+    flex-direction: column;
+    // max-width: 500px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    height: 120vh !important;
+    h2 {
+      margin-top: 30px;
+      text-align: center;
+      color: white;
+    }
+    li {
+      margin-top: 20px;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    img {
+      max-width: 500px;
+      margin: 50px auto;
+    }
+  }
+  .my-card {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #cb945e;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .our-mission {
+    height: 100vh;
+    background-image: url("../assets/missionBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 @media (max-width: 768px) {
   .our-mission {
+    height: 120vh;
     img {
       max-width: 300px;
     }
@@ -69,11 +115,14 @@ export default {};
       // font-size: 10px;
       color: white;
     }
+    li {
+      font-size: 16px;
+    }
   }
   .my-card {
     max-width: 300px;
     h3 {
-      font-size: 15px;
+      font-size: 20px;
     }
   }
 }
