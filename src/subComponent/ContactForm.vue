@@ -5,23 +5,60 @@
       Whether you have questions, suggestions, or just want to say hi, drop us a
       line.
     </p>
-    <form action="mailto:contact@etosha-app.com">
-      <q-input outlined type="text" label="Name" />
-      <q-input style="margin-left: 20px" outlined type="email" label="Email" />
-    </form>
-    <div class="text">
+    <!-- <form action="mailto:contact@etosha-app.com"> -->
+    <form
+      action="https://formcarry.com/s/KiTUW36HilT"
+      method="POST"
+      accept-charset="UTF-8"
+    >
       <q-input
-        filled
-        type="textarea"
-        placeholder="Write your message here..."
+        v-model="name"
+        outlined
+        type="text"
+        label="Name"
+        name="name"
+        required
       />
-      <button>Submit</button>
-    </div>
+      <!-- <input type="text"> -->
+      <q-input
+        v-model="email"
+        style="margin-left: 20px"
+        outlined
+        type="email"
+        label="Email"
+        name="email"
+        required
+      />
+      <div class="text">
+        <q-input
+          v-model="message"
+          filled
+          type="textarea"
+          placeholder="Write your message here..."
+          name="message"
+          required
+        />
+        <button>Submit</button>
+      </div>
+    </form>
+
+
+
+
   </dir>
 </template>
 
 <script>
-export default {};
+import { ref } from "vue";
+export default {
+  setup() {
+    const name = ref(null);
+    const email = ref(null);
+    const message = ref(null);
+
+    return { name, email, message };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
