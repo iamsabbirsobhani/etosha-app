@@ -10,8 +10,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@babel/core": "^7.4.5",
     "@quasar/extras": "^1.0.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.20.3",
     "quasar": "^2.0.0",
     "vuex": "^4.0.1"
   },
