@@ -1,11 +1,8 @@
 {
-    "routes": [
+    "rewrites": [
         {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/.*",
-            "dest": "/index.template.html"
+            "source": "/(.*)",
+            "destination": "/"
         }
     ]
 }
